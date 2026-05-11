@@ -1,0 +1,18 @@
+name: ngf_tcga
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - r-base=4.3
+  - r-tidyverse
+  - r-survival
+  - r-survminer
+  - bioconductor-deseq2
+  - bioconductor-gsva
+  - bioconductor-tcgabiolinks
+  - bioconductor-edger
+  - r-glmnet
+  - r-yaml
+  - r-pheatmap
+  - r-ggplot2

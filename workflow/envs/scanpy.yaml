@@ -1,0 +1,25 @@
+name: ngf_scanpy
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - scanpy=1.9.8
+  - anndata
+  - leidenalg
+  - python-igraph
+  - harmonypy
+  - celltypist
+  - scrublet
+  - matplotlib
+  - seaborn
+  - pandas
+  - numpy
+  - scipy
+  - jupyterlab
+  - pip
+  - pip:
+    - liana-py
+    - decoupler-py
+    - PyComplexHeatmap

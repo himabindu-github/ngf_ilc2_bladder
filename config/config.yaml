@@ -1,0 +1,38 @@
+# ── Project ──────────────────────────────
+project: "NGF-ILC2 bladder cancer"
+author: "your name"
+
+# ── Datasets ─────────────────────────────
+datasets:
+  GSE222315:
+    description: "scRNA-seq, 9 bladder cancer patients"
+    type: "scrna"
+    tool: "both"          # seurat + scanpy
+  TCGA_BLCA:
+    description: "Bulk RNA-seq, 403 samples + survival"
+    type: "bulk"
+    tool: "r"
+
+# ── Key genes (the axis) ─────────────────
+axis_genes:
+  mast_cell_markers:    ["TPSAB1", "TPSB2", "KIT", "CPA3", "HDC"]
+  ilc2_markers:         ["GATA3", "IL1RL1", "KLRG1", "PTGDR2", "IL17RB"]
+  ngf_axis:             ["NGF", "NTRK1", "NGFR"]
+  ilc2_effectors:       ["IL5", "IL13", "IL4", "AREG"]
+  treg_markers:         ["FOXP3", "IL2RA", "CTLA4", "IKZF2"]
+  checkpoints:          ["PDCD1", "CD274", "CTLA4", "LAG3"]
+
+# ── Analysis parameters ──────────────────
+scrna:
+  min_genes: 200
+  max_genes: 6000
+  max_pct_mt: 20
+  n_highly_variable: 3000
+  n_pcs: 30
+  resolution: 0.5
+
+# ── Paths ────────────────────────────────
+paths:
+  data:     "data/"
+  results:  "results/"
+  figures:  "results/figures/"
